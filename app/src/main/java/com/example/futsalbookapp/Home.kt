@@ -4,6 +4,7 @@ import android.os.Bundle
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import android.content.Intent
+import android.net.Uri
 
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -15,8 +16,10 @@ import com.google.android.material.navigation.NavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import android.view.Menu
+import android.view.View
 import kotlinx.android.synthetic.main.nav_header_main2.*
 import com.google.firebase.auth.FirebaseAuth
+import kotlinx.android.synthetic.main.fragment_home.*
 
 class Home : AppCompatActivity() {
 
@@ -25,6 +28,8 @@ class Home : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
+
+
 
 
 //        if(intent != null) {
@@ -64,4 +69,26 @@ class Home : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
+    fun instagram(view: View){
+        ig_btn.setOnClickListener({
+            val i = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/p/B6VilOxpGX5/?igshid=bvpqjulq4lla"))
+            startActivity(i)
+        })
+
+    }
+    fun facebook(view: View){
+        fb_btn.setOnClickListener({
+            val i = Intent(Intent.ACTION_VIEW, Uri.parse("https://m.facebook.com/futsal.cok"))
+            startActivity(i)
+        })
+
+    }
+    fun wa(view: View){
+        wa_btn.setOnClickListener({
+            val i = Intent(Intent.ACTION_VIEW, Uri.parse("https://api.whatsapp.com/send?phone=6282244445828&text=Halo%20mau%20putsal%20gan"))
+            startActivity(i)
+        })
+
+    }
+
 }

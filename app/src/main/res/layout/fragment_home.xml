@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_bg">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/color_bg"
+    tools:context=".Home">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -253,9 +255,11 @@
                     android:layout_height="match_parent">
 
                     <Button
+                        android:id="@+id/wa_btn"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:background="@drawable/wa_icon" />
+                        android:background="@drawable/wa_icon"
+                        android:onClick="wa" />
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -263,7 +267,8 @@
                         android:text="081392554612"
                         android:gravity="center"
                         android:textColor="#ffffff"
-                        android:fontFamily="@font/segoeui_bold"/>
+                        android:fontFamily="@font/segoeui_bold"
+                        />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_marginTop="10dp"
@@ -271,9 +276,12 @@
                     android:layout_height="match_parent">
 
                     <Button
+                        android:id="@+id/ig_btn"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:background="@drawable/ig_icon" />
+                        android:background="@drawable/ig_icon"
+                        android:onClick="instagram"
+                        />
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -289,9 +297,11 @@
                     android:layout_height="match_parent">
 
                     <Button
+                        android:id="@+id/fb_btn"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:background="@drawable/fb_icon" />
+                        android:background="@drawable/fb_icon"
+                        android:onClick="facebook"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -299,7 +309,9 @@
                         android:text="Futsal_Kuy"
                         android:gravity="center"
                         android:textColor="#ffffff"
-                        android:fontFamily="@font/segoeui_bold"/>
+                        android:fontFamily="@font/segoeui_bold"
+                        android:clickable="true"
+                        android:onClick="facebook"/>
                 </LinearLayout>
 
 
