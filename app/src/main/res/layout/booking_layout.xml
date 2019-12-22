@@ -150,7 +150,7 @@
         android:layout_height="25dp"
         android:background="@drawable/btn_custom_2"
         android:fontFamily="@font/segoeui_bold"
-        android:text="Pick the duration "
+        android:text="Pick the field"
         android:textAllCaps="false"
         android:textSize="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
