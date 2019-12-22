@@ -1,8 +1,7 @@
 package com.example.futsalbookapp
 
 import android.os.Bundle
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.snackbar.Snackbar
+
 import android.content.Intent
 import android.net.Uri
 
@@ -17,9 +16,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import android.view.Menu
 import android.view.View
-import kotlinx.android.synthetic.main.nav_header_main2.*
+
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.nav_header_main2.*
+
 
 class Home : AppCompatActivity() {
 
@@ -32,9 +33,7 @@ class Home : AppCompatActivity() {
 
 
 
-//        if(intent != null) {
-//            text_logged_email.text = intent.getStringExtra("email")
-//        }
+
 
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
@@ -57,6 +56,12 @@ class Home : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+//    if(intent!=null){
+//        text_logged_email.text = intent.getStringExtra("email")
+//    }
+
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -89,6 +94,12 @@ class Home : AppCompatActivity() {
             startActivity(i)
         })
 
+    }
+    fun book(view:View){
+        btn_book1.setOnClickListener({
+            val Home = Intent(this@Home, Book::class.java)
+            startActivity(Home)
+        })
     }
 
 }

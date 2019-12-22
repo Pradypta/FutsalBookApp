@@ -31,7 +31,7 @@
 
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/btn_book1"
                 android:layout_width="325dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
@@ -42,7 +42,8 @@
                 android:textAllCaps="false"
                 android:textColor="@color/color_bg"
                 android:textSize="17dp"
-                android:textStyle="bold">
+                android:textStyle="bold"
+                android:onClick="book">
 
             </Button>
 

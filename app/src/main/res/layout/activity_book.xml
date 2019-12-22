@@ -27,7 +27,7 @@
 
     <TextView
         android:id="@+id/textView16"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
         android:fontFamily="@font/segoeui_bold"
@@ -47,6 +47,7 @@
         android:id="@+id/btn_date"
         android:layout_width="112dp"
         android:layout_height="25dp"
+        android:layout_marginLeft="40dp"
         android:background="@drawable/btn_custom_2"
         android:fontFamily="@font/segoeui_bold"
         android:text="Pick a date"
@@ -54,10 +55,10 @@
         android:textSize="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.133"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView16"
-        app:layout_constraintVertical_bias="0.02" />
+        app:layout_constraintVertical_bias="0.014" />
 
     <TextView
         android:id="@+id/textView17"
@@ -70,7 +71,6 @@
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_date"
         app:layout_constraintVertical_bias="0.025">
@@ -81,6 +81,7 @@
         android:id="@+id/btn_hour"
         android:layout_width="112dp"
         android:layout_height="25dp"
+        android:layout_marginLeft="40dp"
         android:background="@drawable/btn_custom_2"
         android:fontFamily="@font/segoeui_bold"
         android:text="Pick a Time "
@@ -88,10 +89,10 @@
         android:textSize="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.133"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView17"
-        app:layout_constraintVertical_bias="0.015" />
+        app:layout_constraintVertical_bias="0.025" />
 
     <TextView
         android:id="@+id/textView18"
@@ -115,6 +116,7 @@
         android:id="@+id/btn_lama"
         android:layout_width="112dp"
         android:layout_height="25dp"
+        android:layout_marginLeft="40dp"
         android:background="@drawable/btn_custom_2"
         android:fontFamily="@font/segoeui_bold"
         android:text="Pick the duration "
@@ -122,10 +124,10 @@
         android:textSize="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.133"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView18"
-        app:layout_constraintVertical_bias="0.04" />
+        app:layout_constraintVertical_bias="0.022" />
 
     <TextView
         android:id="@+id/textView19"
@@ -148,6 +150,7 @@
         android:id="@+id/btn_lap"
         android:layout_width="112dp"
         android:layout_height="25dp"
+        android:layout_marginLeft="40dp"
         android:background="@drawable/btn_custom_2"
         android:fontFamily="@font/segoeui_bold"
         android:text="Pick the field"
@@ -155,10 +158,10 @@
         android:textSize="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.133"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView19"
-        app:layout_constraintVertical_bias="0.048" />
+        app:layout_constraintVertical_bias="0.03" />
 
     <TextView
         android:id="@+id/txt_price"
@@ -179,8 +182,8 @@
 
     <Button
         android:id="@+id/btn_book"
-        android:layout_width="207dp"
-        android:layout_height="28dp"
+        android:layout_width="208dp"
+        android:layout_height="30dp"
         android:background="@drawable/btn_book"
         android:fontFamily="@font/segoeui_bold"
         android:textAllCaps="false"
