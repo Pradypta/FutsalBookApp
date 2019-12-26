@@ -21,4 +21,7 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+    <style name="RadioButtonStyle" parent="Theme.AppCompat.Light">
+        <item name="color">@color/color_bg_2</item>
+    </style>
 </resources>

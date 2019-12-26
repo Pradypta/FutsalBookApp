@@ -40,6 +40,8 @@ dependencies {
     // design library
     implementation 'com.android.support:design:29.0.0'
     implementation 'com.google.android.material:material:version'
+    // circle image
+    implementation 'com.mikhaellopez:circularimageview:4.1.1'
 
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.navigation:navigation-fragment:2.1.0'

@@ -16,9 +16,13 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import android.view.Menu
 import android.view.View
+import android.widget.Toast
+import com.example.futsalbookapp.models.User
 
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.fragment_profile.*
 import kotlinx.android.synthetic.main.nav_header_main2.*
 
 
@@ -97,8 +101,14 @@ class Home : AppCompatActivity() {
     }
     fun book(view:View){
         btn_book1.setOnClickListener({
-            val Home = Intent(this@Home, Book::class.java)
+            val Home = Intent(this, Book::class.java)
             startActivity(Home)
+        })
+    }
+    fun profile(view:View){
+        btn_edit_prof.setOnClickListener({
+            val Profile = Intent(this, Profile::class.java)
+            startActivity(Profile)
         })
     }
 

@@ -5,4 +5,7 @@
         <item name="windowNoTitle">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
+    <style name="RadioButtonStyle" parent="Theme.AppCompat.Light">
+        <item name="color">@color/color_bg_2</item>
+    </style>
 </resources>

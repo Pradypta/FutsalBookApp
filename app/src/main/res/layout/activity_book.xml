@@ -3,10 +3,23 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_bg">
+    android:background="@color/color_bg"
+    tools:context=".Book"
+ >
 
+    <TextView
+        android:id="@+id/txt_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="invisible">
+
+    </TextView>
     <TextView
         android:id="@+id/textView15"
         android:layout_width="match_parent"
@@ -48,20 +61,19 @@
         android:layout_width="112dp"
         android:layout_height="25dp"
         android:layout_marginLeft="40dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/btn_custom_2"
         android:fontFamily="@font/segoeui_bold"
         android:text="Pick a date"
         android:textAllCaps="false"
         android:textSize="12dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView16"
-        app:layout_constraintVertical_bias="0.014" />
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <TextView
-        android:id="@+id/textView17"
+        android:id="@+id/txt_date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
@@ -77,6 +89,12 @@
 
     </TextView>
 
+
+
+
+
+
+
     <Button
         android:id="@+id/btn_hour"
         android:layout_width="112dp"
@@ -91,7 +109,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView17"
+        app:layout_constraintTop_toBottomOf="@+id/txt_date"
         app:layout_constraintVertical_bias="0.025" />
 
     <TextView
@@ -112,29 +130,26 @@
 
     </TextView>
 
-    <Button
-        android:id="@+id/btn_lama"
-        android:layout_width="112dp"
-        android:layout_height="25dp"
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="155dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
-        android:background="@drawable/btn_custom_2"
-        android:fontFamily="@font/segoeui_bold"
-        android:text="Pick the duration "
-        android:textAllCaps="false"
-        android:textSize="12dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginTop="12dp"
+
+
+        android:outlineAmbientShadowColor="@color/color_bg_2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView18"
-        app:layout_constraintVertical_bias="0.022" />
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
     <TextView
         android:id="@+id/textView19"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/segoeui_bold"
         android:text="Lapangan"
         android:textColor="@color/color_bg_2"
@@ -142,26 +157,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_lama">
+        app:layout_constraintTop_toBottomOf="@+id/spinner">
 
     </TextView>
 
-    <Button
-        android:id="@+id/btn_lap"
-        android:layout_width="112dp"
-        android:layout_height="25dp"
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="155dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
-        android:background="@drawable/btn_custom_2"
-        android:fontFamily="@font/segoeui_bold"
-        android:text="Pick the field"
-        android:textAllCaps="false"
-        android:textSize="12dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+
+
+        android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView19"
-        app:layout_constraintVertical_bias="0.03" />
+        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
 
     <TextView
         android:id="@+id/txt_price"
@@ -176,9 +187,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_lap"
-        app:layout_constraintVertical_bias="0.166">
-    </TextView>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.687"></TextView>
 
     <Button
         android:id="@+id/btn_book"
@@ -192,5 +202,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.788" />
+        app:layout_constraintVertical_bias="0.788"
+        android:onClick="saveUser"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
