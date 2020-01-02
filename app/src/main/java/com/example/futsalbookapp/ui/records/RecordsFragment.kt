@@ -22,10 +22,14 @@ class RecordsFragment : Fragment() {
         recordsViewModel =
             ViewModelProviders.of(this).get(RecordsViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_records, container, false)
-        val textView: TextView = root.findViewById(R.id.text_slideshow)
+//        val textView: TextView = root.findViewById(R.id.text_slideshow)
         recordsViewModel.text.observe(this, Observer {
-            textView.text = it
+            //            textView.text = it
         })
         return root
+
     }
+
+
+
 }

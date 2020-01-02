@@ -10,7 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.futsalbookapp.R
 
-class GalleryFragment : Fragment() {
+class ProfileFragment : Fragment() {
 
     private lateinit var profileViewModel: ProfileViewModel
 

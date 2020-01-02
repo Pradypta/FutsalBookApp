@@ -12,14 +12,30 @@
 
     <TextView
         android:id="@+id/txt_result"
+        android:text="cuk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:textColor="#ffffff"
         android:visibility="invisible">
 
     </TextView>
+
+    <TextView
+        android:id="@+id/txt_result1"
+        android:text="cuk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/textView15">
+
+    </TextView>
+
     <TextView
         android:id="@+id/textView15"
         android:layout_width="match_parent"
@@ -64,7 +80,7 @@
         android:layout_marginTop="12dp"
         android:background="@drawable/btn_custom_2"
         android:fontFamily="@font/segoeui_bold"
-        android:text="Pick a date"
+        android:text="Pick a Date"
         android:textAllCaps="false"
         android:textSize="12dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -88,12 +104,6 @@
         app:layout_constraintVertical_bias="0.025">
 
     </TextView>
-
-
-
-
-
-
 
     <Button
         android:id="@+id/btn_hour"
@@ -138,7 +148,6 @@
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="12dp"
-
 
         android:outlineAmbientShadowColor="@color/color_bg_2"
         app:layout_constraintStart_toStartOf="parent"
@@ -190,19 +199,36 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.687"></TextView>
 
+    <TextView
+        android:id="@+id/txt_bonus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/segoeui_bold"
+        android:gravity="center"
+        android:text="-"
+        android:textColor="@color/color_bg_2"
+        android:textSize="25dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_price"
+        app:layout_constraintVertical_bias="0.171"
+        tools:layout_editor_absoluteX="0dp">
+
+    </TextView>
+
     <Button
         android:id="@+id/btn_book"
         android:layout_width="208dp"
         android:layout_height="30dp"
         android:background="@drawable/btn_book"
         android:fontFamily="@font/segoeui_bold"
+        android:onClick="saveUser"
         android:textAllCaps="false"
         android:textSize="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.788"
-        android:onClick="saveUser"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/txt_bonus"
+        app:layout_constraintVertical_bias="0.2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -33,6 +33,12 @@ class Home : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
+        val uid = FirebaseAuth.getInstance().uid
+        val email = FirebaseAuth.getInstance().currentUser?.email
+        val ref = FirebaseDatabase.getInstance().getReference("/users/$uid")
+        val user = User(email.toString())
+        ref.setValue(user)
+
 
 
 
