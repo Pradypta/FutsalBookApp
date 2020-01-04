@@ -6,17 +6,20 @@
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".Records">
+
     <TextView
         android:id="@+id/txt_kode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="24dp"
         android:text="Kode Booking "
         android:textColor="@color/color_bg_2"
-        android:textSize="20dp"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
     </TextView>
 
     <TextView
@@ -28,7 +31,7 @@
         android:layout_marginTop="8dp"
         android:text="Tanggal "
         android:textColor="@color/color_bg_2"
-        android:textSize="20dp"
+        android:textSize="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_kode">
 
@@ -43,7 +46,7 @@
         android:layout_marginTop="8dp"
         android:text="Jam "
         android:textColor="@color/color_bg_2"
-        android:textSize="20dp"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView20">
 
@@ -59,7 +62,7 @@
         android:layout_marginTop="8dp"
         android:text="Lama "
         android:textColor="@color/color_bg_2"
-        android:textSize="20dp"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView25">
 
@@ -74,7 +77,7 @@
         android:layout_marginTop="8dp"
         android:text="Lapangan "
         android:textColor="@color/color_bg_2"
-        android:textSize="20dp"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView21">
 
@@ -90,7 +93,7 @@
         android:layout_marginRight="20dp"
         android:text="Harga "
         android:textColor="@color/color_bg_2"
-        android:textSize="20dp"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView22">
 
@@ -100,59 +103,14 @@
         android:id="@+id/textView24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="172dp"
-        android:layout_marginLeft="172dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginLeft="128dp"
         android:layout_marginTop="24dp"
         android:text=": "
         android:textColor="@color/color_bg_2"
-        android:textSize="20dp"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
-    </TextView>
-
-    <TextView
-        android:id="@+id/textView26"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="172dp"
-        android:layout_marginLeft="172dp"
-        android:layout_marginTop="8dp"
-        android:text=": "
-        android:textColor="@color/color_bg_2"
-        android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView24">
-
-    </TextView>
-
-    <TextView
-        android:id="@+id/textView27"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="172dp"
-        android:layout_marginLeft="172dp"
-        android:layout_marginTop="8dp"
-        android:text=": "
-        android:textColor="@color/color_bg_2"
-        android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView28">
-
-    </TextView>
-
-    <TextView
-        android:id="@+id/textView28"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="172dp"
-        android:layout_marginLeft="172dp"
-        android:layout_marginTop="8dp"
-        android:text=": "
-        android:textColor="@color/color_bg_2"
-        android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView29">
 
     </TextView>
 
@@ -160,14 +118,44 @@
         android:id="@+id/textView29"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="172dp"
-        android:layout_marginLeft="172dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginLeft="128dp"
         android:layout_marginTop="8dp"
         android:text=": "
         android:textColor="@color/color_bg_2"
-        android:textSize="20dp"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView26">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginLeft="128dp"
+        android:layout_marginTop="8dp"
+        android:text=": "
+        android:textColor="@color/color_bg_2"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView29">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginLeft="128dp"
+        android:layout_marginTop="8dp"
+        android:text=": "
+        android:textColor="@color/color_bg_2"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView28">
 
     </TextView>
 
@@ -175,14 +163,44 @@
         android:id="@+id/textView30"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="172dp"
-        android:layout_marginLeft="172dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginLeft="128dp"
         android:layout_marginTop="8dp"
         android:text=": "
         android:textColor="@color/color_bg_2"
-        android:textSize="20dp"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView27">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginLeft="128dp"
+        android:layout_marginTop="8dp"
+        android:text=": "
+        android:textColor="@color/color_bg_2"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView30">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginLeft="128dp"
+        android:layout_marginTop="8dp"
+        android:text=": "
+        android:textColor="@color/color_bg_2"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView24">
 
     </TextView>
 
@@ -195,7 +213,7 @@
         android:layout_marginTop="24dp"
         android:text="-"
         android:textColor="@color/color_bg_2"
-        android:textSize="20dp"
+        android:textSize="15sp"
         app:layout_constraintStart_toEndOf="@+id/textView24"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -210,7 +228,7 @@
         android:layout_marginTop="8dp"
         android:text="-"
         android:textColor="@color/color_bg_2"
-        android:textSize="20dp"
+        android:textSize="15sp"
         app:layout_constraintStart_toEndOf="@+id/textView26"
         app:layout_constraintTop_toBottomOf="@+id/record_kode">
 
@@ -225,7 +243,7 @@
         android:layout_marginTop="8dp"
         android:text="-"
         android:textColor="@color/color_bg_2"
-        android:textSize="20dp"
+        android:textSize="15sp"
         app:layout_constraintStart_toEndOf="@+id/textView29"
         app:layout_constraintTop_toBottomOf="@+id/record_tgl">
 
@@ -240,7 +258,7 @@
         android:layout_marginTop="8dp"
         android:text="-"
         android:textColor="@color/color_bg_2"
-        android:textSize="20dp"
+        android:textSize="15sp"
         app:layout_constraintStart_toEndOf="@+id/textView28"
         app:layout_constraintTop_toBottomOf="@+id/record_jam">
 
@@ -255,7 +273,7 @@
         android:layout_marginTop="8dp"
         android:text="-"
         android:textColor="@color/color_bg_2"
-        android:textSize="20dp"
+        android:textSize="15sp"
         app:layout_constraintStart_toEndOf="@+id/textView27"
         app:layout_constraintTop_toBottomOf="@+id/record_lama">
 
@@ -270,9 +288,39 @@
         android:layout_marginTop="8dp"
         android:text="-"
         android:textColor="@color/color_bg_2"
-        android:textSize="20dp"
+        android:textSize="15sp"
         app:layout_constraintStart_toEndOf="@+id/textView30"
         app:layout_constraintTop_toBottomOf="@+id/record_lap">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/txt_bon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="8dp"
+        android:text="Bonus"
+        android:textColor="@color/color_bg_2"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView23">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/record_bon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="-"
+        android:textColor="@color/color_bg_2"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/textView31"
+        app:layout_constraintTop_toBottomOf="@+id/record_hrg">
 
     </TextView>
 
@@ -280,16 +328,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="236dp"
         android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/line_img"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="24dp"
-        android:layout_marginBottom="24dp"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/record_hrg"
-        app:layout_constraintVertical_bias="0.066">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
     </ImageView>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -243,7 +243,7 @@ class Book : AppCompatActivity() {
         val harga = txt_price.text
         val bonus = txt_bonus.text
 
-        val ref1 = FirebaseDatabase.getInstance().getReference().child("booking")
+        val ref1 = FirebaseDatabase.getInstance().getReference().child("booking/$uid")
         val id1 = ref1.push().key
 
         if(btn_date.text.equals("Pick a Date")|| btn_hour.text.equals("Pick a Time")) {
