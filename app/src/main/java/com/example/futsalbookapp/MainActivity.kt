@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import androidx.core.view.isVisible
 import com.google.android.gms.auth.api.Auth
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.ConnectionResult
@@ -40,11 +41,14 @@ class MainActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedList
             val result = Auth.GoogleSignInApi.getSignInResultFromIntent(data)
             if(result.isSuccess){
 
+
                 val account = result.signInAccount
                 val idToken= account!!.idToken
 
                 val credential = GoogleAuthProvider.getCredential(idToken,null)
+
                 firebaseAuthWithGoogle(credential)
+
             }else{
                 Log.d("LOGIN_ERROR","Login Unsuccessful")
                 Toast.makeText(this,"Login Unsuccessful",Toast.LENGTH_SHORT).show()
@@ -56,8 +60,10 @@ class MainActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedList
     private fun firebaseAuthWithGoogle(credential: AuthCredential?) {
         firebaseAuth!!.signInWithCredential(credential!!)
             .addOnSuccessListener { authResult ->
+                progressBar.isVisible = false
                 val logged_email = authResult.user.email
                 val Home = Intent(this@MainActivity, Home::class.java)
+//                Home.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
                 Home.putExtra("email",logged_email)
                 startActivity(Home)
             }
@@ -77,13 +83,16 @@ class MainActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedList
 
         btn_sign_in.setOnClickListener {
             signIn()
+
         }
 
 
     }
 
         private fun signIn() {
-        val intent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient)
+            progressBar.isVisible = true
+
+            val intent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient)
         startActivityForResult(intent, PERMISSION_CODE)
     }
 
