@@ -52,12 +52,12 @@
     </TextView>
 
     <EditText
-        android:id="@+id/edit_username"
+        android:id="@+id/edit_nohp"
         android:layout_width="261dp"
         android:layout_height="30dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:autofillHints="Masukkan Username"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/edit_txt_custom"
         android:fontFamily="@font/segoeui_bold"
         android:inputType="number"
@@ -74,22 +74,24 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="@font/segoeui_bold"
         android:text="No Handphone"
         android:textColor="@color/color_bg_2"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_nohp">
+        app:layout_constraintTop_toBottomOf="@+id/edit_username">
 
     </TextView>
 
+
     <EditText
-        android:id="@+id/edit_nohp"
+        android:id="@+id/edit_username"
         android:layout_width="261dp"
         android:layout_height="30dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/edit_txt_custom"
         android:fontFamily="@font/segoeui_bold"
         android:textColor="@color/color_bg"
@@ -98,7 +100,6 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_username">
 
     </EditText>
-
 
     <TextView
         android:id="@+id/txt_gender"
@@ -112,7 +113,7 @@
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_username"
+        app:layout_constraintTop_toBottomOf="@+id/edit_nohp"
         app:layout_constraintVertical_bias="0.063" />
 
     <RadioGroup

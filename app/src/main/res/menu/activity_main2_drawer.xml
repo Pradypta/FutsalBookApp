@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
@@ -16,11 +17,12 @@
             android:id="@+id/nav_records"
             android:icon="@drawable/icon_records"
             android:title="Records" />
-        <item
-            android:id="@+id/nav_logout"
-            android:icon="@drawable/icon_exit"
-            android:title="Log out"
-            />
+<!--        <item-->
+<!--            android:id="@+id/nav_logout"-->
+<!--            android:icon="@drawable/icon_exit"-->
+<!--            android:title="Log out"-->
+<!--            app:showAsAction="withText"-->
+<!--            />-->
 
     </group>
 

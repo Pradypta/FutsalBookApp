@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import com.google.android.gms.auth.api.Auth
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.ConnectionResult
@@ -17,12 +16,18 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedListener {
+
+
+
+
     override fun onConnectionFailed(p0: ConnectionResult) {
         Toast.makeText(this, "" + p0.errorMessage, Toast.LENGTH_SHORT).show()
     }
 
     companion object {
         private val PERMISSION_CODE = 1111
+
+
     }
 
     lateinit var mGoogleApiClient: GoogleApiClient
@@ -73,9 +78,11 @@ class MainActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedList
         btn_sign_in.setOnClickListener {
             signIn()
         }
+
+
     }
 
-    private fun signIn() {
+        private fun signIn() {
         val intent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient)
         startActivityForResult(intent, PERMISSION_CODE)
     }

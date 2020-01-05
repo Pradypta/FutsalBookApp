@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.futsalbookapp.models.Booking
 import com.google.firebase.database.*
+import com.squareup.picasso.Picasso
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Item
 import com.xwray.groupie.GroupieViewHolder
@@ -69,7 +70,6 @@ class RecItem(val rec:Booking): Item<GroupieViewHolder>(){
         viewHolder.itemView.record_lap.text = rec.lap
         viewHolder.itemView.record_hrg.text = rec.harga
         viewHolder.itemView.record_bon.text = rec.bonus
-
     }
 
     override fun getLayout(): Int {

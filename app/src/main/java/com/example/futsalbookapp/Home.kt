@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.content.Intent
 import android.net.Uri
 import android.util.Log
+import android.view.ContextMenu
 
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -16,38 +17,50 @@ import com.google.android.material.navigation.NavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import android.view.Menu
+import android.view.MenuItem
 import android.view.View
+import androidx.viewpager.widget.ViewPager
 import com.example.futsalbookapp.models.User
+import com.google.android.gms.common.api.GoogleApiClient
+import com.google.firebase.FirebaseError
 
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_main2.*
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_profile.*
-import kotlinx.android.synthetic.main.nav_header_main2.*
 import kotlinx.android.synthetic.main.nav_header_main2.view.*
 
 
 class Home : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
+    lateinit var mGoogleApiClient: GoogleApiClient
+    private lateinit var mDatabase : DatabaseReference
+
+
+    internal lateinit var viewPager : ViewPager
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
         val uid = FirebaseAuth.getInstance().uid
         val email = FirebaseAuth.getInstance().currentUser?.email
         val ref = FirebaseDatabase.getInstance().getReference("/users/$uid")
-        val user = User(uid.toString(),email.toString(), " "," "," "," ")
+        val user = User(uid.toString(),email.toString())
         ref.setValue(user)
 
-        Log.d("tes",email.toString())
 
 
         val headerView = nav_view.getHeaderView(0)
         headerView.text_logged_email.text = email.toString()
 
+
+//        headerView.txt_user_nav.text = "a"
 
 
 
@@ -64,6 +77,9 @@ class Home : AppCompatActivity() {
 
 
 
+        mDatabase = FirebaseDatabase.getInstance().reference
+//        ProfileData()
+
 
         appBarConfiguration = AppBarConfiguration(
 
@@ -74,14 +90,9 @@ class Home : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
-
-//        if(intent!=null){
-//            text_logged_email.text = intent.getStringExtra("email")
-//        }
-
-//        text_logged_email.text = email.toString()
-
     }
+
+
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -89,10 +100,25 @@ class Home : AppCompatActivity() {
         return true
     }
 
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId){
+
+            R.id.nav_logout ->{
+                FirebaseAuth.getInstance().signOut()
+                finish()
+            }
+        }
+        return true
+    }
+
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
+
+
+
     fun instagram(view: View){
         ig_btn.setOnClickListener({
             val i = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/p/B6VilOxpGX5/?igshid=bvpqjulq4lla"))
@@ -126,5 +152,7 @@ class Home : AppCompatActivity() {
             startActivity(Profile)
         })
     }
+
+
 
 }

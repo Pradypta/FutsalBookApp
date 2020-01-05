@@ -18,6 +18,8 @@
     <string name="menu_send">Send</string>
     <string name="edit_prof">Edit Your Profile</string>
     <string name="select">SELECT PHOTO</string>
+    <string name="email">E-mail</string>
+
 
 
 </resources>

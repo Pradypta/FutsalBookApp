@@ -21,9 +21,9 @@
             android:orientation="vertical">
 
             <ImageView
-                 android:background="@color/color_bg_2"
+                 android:background="@drawable/promo"
                  android:layout_width="325dp"
-                 android:layout_height="142dp"
+                 android:layout_height="150dp"
                  android:layout_gravity="center"
                  android:layout_margin="40dp">
 
@@ -60,13 +60,26 @@
 
             </TextView>
             <ImageView
-                android:background="@color/color_bg_2"
+                android:background="@drawable/lap1"
                 android:layout_width="325dp"
-                android:layout_height="142dp"
+                android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="5dp">
             </ImageView>
-
+            <ImageView
+                android:background="@drawable/lap2"
+                android:layout_width="325dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp">
+            </ImageView>
+            <ImageView
+                android:background="@drawable/lap3"
+                android:layout_width="325dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp">
+            </ImageView>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

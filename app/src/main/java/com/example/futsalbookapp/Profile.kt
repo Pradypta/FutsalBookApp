@@ -11,19 +11,25 @@ import android.util.Log
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.Toast
-import com.example.futsalbookapp.models.User
+import com.example.futsalbookapp.models.Profile_model
 import com.example.futsalbookapp.ui.profile.ProfileFragment
+
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.*
 import com.google.firebase.storage.FirebaseStorage
 import kotlinx.android.synthetic.main.activity_profile.*
+import kotlinx.android.synthetic.main.activity_profile.circle_photo
+import kotlinx.android.synthetic.main.fragment_profile.*
 import java.util.*
+
+
 
 class Profile : AppCompatActivity() {
 
     lateinit var rg_gender :RadioGroup
     lateinit var rb_male :RadioButton
     lateinit var rb_female :RadioButton
+//    lateinit var txt_user: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,12 +39,14 @@ class Profile : AppCompatActivity() {
             val intent = Intent(Intent.ACTION_PICK)
             intent.type = "image/*"
             startActivityForResult(intent, 0)
-
+        }
         btn_save.setOnClickListener{
             uploadImageToFirebase()
+        }
 
-        }
-        }
+
+
+
     }
 
 
@@ -67,9 +75,10 @@ class Profile : AppCompatActivity() {
 
         ref.putFile(selectedPhotoUri!!)
             .addOnSuccessListener {
-                Log.d("Upload Image", "Upload Sukses Dab")
+                Log.d("Upload Image", "Upload url :${it.metadata?.path}")
+
                 ref.downloadUrl.addOnSuccessListener {
-                    Log.d("get url", "$it")
+                    Log.d("get url", "File Location :${ref.downloadUrl}")
                 }
                 saveProfileToDatabase(it.toString())
             }
@@ -91,16 +100,37 @@ class Profile : AppCompatActivity() {
             }
             else if(rb_female.isChecked){
                 gen +="Wanita"
-
             }
         }
-        val ref = FirebaseDatabase.getInstance().getReference("/users/$uid")
+        val ref = FirebaseDatabase.getInstance().getReference("/profile/$uid")
 
-        val user = User(uid.toString(),email.toString(), photo_url,username.toString(),hp.toString(),gen)
-        ref.setValue(user)
+        val prof = Profile_model(uid.toString(), photo_url,username.toString(),hp.toString(),gen)
+        ref.setValue(prof)
+
+
+
+
         Toast.makeText(applicationContext,"Data Berhasil Disimpan",Toast.LENGTH_LONG).show()
-
-
-
+//        val x = Intent(this, ProfileFragment::class.java)
+//        startActivity(x)
     }
+    fun loadProfileData() {
+        val uid = FirebaseAuth.getInstance().uid
+
+        val ref = FirebaseDatabase.getInstance().getReference("/profile/$uid")
+        val postListener = object : ValueEventListener {
+            override fun onDataChange(p0: DataSnapshot) {
+                val y = p0.getValue(Profile_model::class.java)
+                val x = y?.username
+                txt_user.text = x.toString()
+                Log.d("Usrname=",x.toString())
+            }
+
+            override fun onCancelled(p0: DatabaseError) {
+            }
+
+
+        }
+        ref.addValueEventListener(postListener)
+}
 }

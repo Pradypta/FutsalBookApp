@@ -25,11 +25,11 @@
         android:label="@string/menu_records"
         tools:layout="@layout/fragment_records" />
 
-<!--    <fragment-->
-<!--        android:id="@+id/nav_tools"-->
-<!--        android:name="com.example.futsalbookapp.ui.tools.ToolsFragment"-->
-<!--        android:label="@string/menu_tools"-->
-<!--        tools:layout="@layout/fragment_tools" />-->
+    <fragment
+        android:id="@+id/nav_logout"
+        android:name="com.example.futsalbookapp.ui.logout.LogoutFragment"
+        android:label="Logout"
+        tools:layout="@layout/fragment_logout" />
 
 
 </navigation>
