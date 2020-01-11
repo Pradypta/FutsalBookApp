@@ -21,7 +21,9 @@ import android.view.MenuItem
 import android.view.View
 import androidx.viewpager.widget.ViewPager
 import com.example.futsalbookapp.models.User
+import com.google.android.gms.auth.api.Auth
 import com.google.android.gms.common.api.GoogleApiClient
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.FirebaseError
 
 import com.google.firebase.auth.FirebaseAuth
@@ -41,7 +43,7 @@ class Home : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     lateinit var mGoogleApiClient: GoogleApiClient
     private lateinit var mDatabase : DatabaseReference
-
+    lateinit var firebaseAuth :FirebaseAuth
 
     internal lateinit var viewPager : ViewPager
 
@@ -60,7 +62,14 @@ class Home : AppCompatActivity() {
         headerView.text_logged_email.text = email.toString()
 
 
-//        headerView.txt_user_nav.text = "a"
+        val fab: FloatingActionButton = findViewById(R.id.fab)
+        fab.setOnClickListener {
+//            firebaseAuth.signOut()
+            FirebaseAuth.getInstance().signOut()
+            Auth.GoogleSignInApi.signOut(mGoogleApiClient)
+            finish()
+
+        }
 
 
 
@@ -96,19 +105,13 @@ class Home : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.main2, menu)
+        menuInflater.inflate(R.menu.activity_main2_drawer, menu)
         return true
     }
 
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId){
 
-            R.id.nav_logout ->{
-                FirebaseAuth.getInstance().signOut()
-                finish()
-            }
-        }
         return true
     }
 

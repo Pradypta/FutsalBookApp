@@ -108,8 +108,6 @@ class Profile : AppCompatActivity() {
         ref.setValue(prof)
 
 
-
-
         Toast.makeText(applicationContext,"Data Berhasil Disimpan",Toast.LENGTH_LONG).show()
 //        val x = Intent(this, ProfileFragment::class.java)
 //        startActivity(x)

@@ -75,10 +75,6 @@ class RecItem(val rec:Booking): Item<GroupieViewHolder>(){
     override fun getLayout(): Int {
         return R.layout.records_layout
     }
-
-
-
-
 }
 
 

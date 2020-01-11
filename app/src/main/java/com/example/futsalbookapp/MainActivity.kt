@@ -19,8 +19,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedListener {
 
 
-
-
     override fun onConnectionFailed(p0: ConnectionResult) {
         Toast.makeText(this, "" + p0.errorMessage, Toast.LENGTH_SHORT).show()
     }
@@ -68,7 +66,9 @@ class MainActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedList
                 startActivity(Home)
             }
             .addOnFailureListener{
+                progressBar.isVisible = false
                 Toast.makeText(this,"Login Unsucsessful",Toast.LENGTH_SHORT).show()
+
             }
     }
 
@@ -83,6 +83,8 @@ class MainActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedList
 
         btn_sign_in.setOnClickListener {
             signIn()
+            Auth.GoogleSignInApi.signOut(mGoogleApiClient)
+
 
         }
 

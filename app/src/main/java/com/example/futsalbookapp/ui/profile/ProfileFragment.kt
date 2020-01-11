@@ -74,9 +74,9 @@ class ProfileFragment : Fragment() {
 
             }
 
+
             override fun onCancelled(p0: DatabaseError) {
             }
-
 
         }
         ref.addValueEventListener(postListener)
